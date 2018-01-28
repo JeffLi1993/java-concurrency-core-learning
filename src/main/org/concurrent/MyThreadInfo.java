@@ -31,7 +31,7 @@ public class MyThreadInfo extends Thread {
 
     public static void main(String[] args) {
         MyThreadInfo thread = new MyThreadInfo();
-        thread.run();
+        thread.start();
 
         System.out.print("MyThreadInfo 的线程对象 \n"
                 + "线程唯一标识符：" + thread.getId() + "\n"
