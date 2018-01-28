@@ -31,7 +31,7 @@ public class MyThread extends Thread {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             MyThread thread = new MyThread();
-            thread.run();
+            thread.start();
 
             System.out.println("MyThread 的线程对象 " + thread.getId());
         }
