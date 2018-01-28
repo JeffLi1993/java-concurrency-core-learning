@@ -31,7 +31,7 @@ public class MyThreadBrother implements Runnable {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             Thread thread = new Thread(new MyThreadBrother());
-            thread.run();
+            thread.start();
 
             System.out.println("MyThreadBrother 的线程对象 " + thread.getId());
         }
