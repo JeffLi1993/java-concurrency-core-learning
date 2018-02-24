@@ -9,4 +9,5 @@ org.concurrent.MyThreadBrother          // 实现 Runnable 接口类创建线程
 org.concurrent.MyThreadInfo             // 线程实例对象的属性值
 org.concurrent.InterruptedException     // 抛出 InterruptedException 的线程，中断状态被重置为默认状态 false
 org.concurrent.InterruptedThread        // 一直运行的线程，中断状态为 true
+org.concurrent.ThreadSafeStop           // 安全终止线程
 ```
