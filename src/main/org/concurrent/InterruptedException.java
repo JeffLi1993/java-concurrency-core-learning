@@ -29,12 +29,10 @@ public class InterruptedException implements Runnable {
     @Override // 可以省略
     public void run() {
         // 一直 sleep
-        while (true) {
-            try {
-                TimeUnit.SECONDS.sleep(10);
-            } catch (java.lang.InterruptedException e) {
-                e.printStackTrace();
-            }
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (java.lang.InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -49,7 +47,6 @@ public class InterruptedException implements Runnable {
         // 在抛出异常 InterruptedException 前，JVM 会先将中断状态重置为默认状态 false
         interruptedThread.interrupt();
         System.out.println("InterruptedThread interrupted is " + interruptedThread.isInterrupted());
-
         TimeUnit.SECONDS.sleep(2);
     }
 }
